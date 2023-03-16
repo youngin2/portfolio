@@ -1,0 +1,92 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: Youngin Choi
+theme: PaperMod
+
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: research
+      name: Research
+      url: /research
+      weight: 20
+    - identifier: project
+      name: Project
+      url: /project
+      weight: 30
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 40
+
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Youngin Choi"
+    subtitle: "Hi 👋, I'm Youngin, an **AI graudate school** student at the **Gwangju Institute of Science and Technology**. 
+    I'm a 2nd year master's student. My **CV** is located to the far right of the icon below!
+    Try clcking 🙂"
+    imageUrl: "home/5.png"
+    imageWidth: 220
+    imageHeight: 220
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:young_in@gm.gist.ac.kr"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/yichoi/"
+    - name: "github"
+      url: "https://github.com/youngin2"
+    - name: "instagram"
+      url: "https://www.instagram.com/oin_2v/"
+    - name: "cv"
+      url: "https://drive.google.com/file/d/1olMwWwJAEzo7UplSH68eqSDGm3mCPrGp/view?usp=sharing"
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
